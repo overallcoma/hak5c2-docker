@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export C2_FILE="/hak5c2/c2-3.2.0_amd64_linux"
+export C2_FILE="./c2-3.2.0_amd64_linux"
 echo "${C2_FILE}"
 echo "${C2_HOSTNAME}"
 ls /hak5c2
@@ -31,4 +31,4 @@ else
 fi
 
 cd /hak5c2
-/bin/bash "${C2_FILE} ${C2_SWITCHES}"
+"${C2_FILE} ${C2_SWITCHES}"
