@@ -23,4 +23,5 @@ then
     export C2_SWITCHES="${C2_SWITCHES} -setLicenseKey ${C2_LICENSE_KEY}"
 fi
 
-/bin/bash /hak5c2/${C2_FILE} ${C2_SWITCHES}
+cd /hak5c2
+/bin/bash ./${C2_FILE} ${C2_SWITCHES}
