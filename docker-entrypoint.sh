@@ -28,4 +28,3 @@ fi
 
 cd /hak5c2
 /bin/bash "${C2_FILE} ${C2_SWITCHES}"
-tail -f "/dev/null"
