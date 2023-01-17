@@ -1,7 +1,7 @@
 #!/bin/bash
 
-export C2_FILE="$(find /hak5c2/ -type f -name '*amd64_linux')"
-print "${C2_FILE}"
+export C2_FILE="$(find /hak5c2 -type f -name '*amd64_linux')"
+echo "${C2_FILE}"
 
 export C2_SWITCHES="${C2_SWITCHES} -reverseProxy"
 
