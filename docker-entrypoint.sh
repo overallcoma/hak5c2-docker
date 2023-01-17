@@ -2,6 +2,8 @@
 
 export C2_FILE="/hak5c2/c2-3.2.0_amd64_linux"
 echo "${C2_FILE}"
+chmod +x "${C2_FILE}"
+echo "${C2_FILE}"
 echo "${C2_HOSTNAME}"
 ls /hak5c2
 
@@ -30,5 +32,4 @@ else
     export C2_SWITCHES="${C2_SWITCHES} -setLicenseKey ${C2_LICENSE_KEY}"
 fi
 
-cd /hak5c2
 "${C2_FILE} ${C2_SWITCHES}"
