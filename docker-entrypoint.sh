@@ -16,7 +16,7 @@ if [ -z ${C2_HOSTNAME} ]
 then
     export C2_SWITCHES="${C2_SWITCHES} -hostname ${C2_HOSTNAME}"
 else
-    print "C2_HOSTNAME is a required variable"
+    echo "C2_HOSTNAME is a required variable"
     sleep 10
     init 0
 fi
