@@ -7,15 +7,6 @@ echo "${C2_FILE}"
 echo "${C2_HOSTNAME}"
 ls /hak5c2
 
-export C2_SWITCHES="-reverseProxy"
-
-if [ -z ${C2_DEBUG+x} ]
-then
-    echo "Debug not set"
-else
-    export C2_SWITCHES="${C2_SWITCHES} -debug"
-fi
-
 if [ -z ${C2_HOSTNAME+x} ]
 then
     echo "C2_HOSTNAME is a required variable"
@@ -23,6 +14,15 @@ then
     exit
 else
     export C2_SWITCHES="${C2_SWITCHES} -hostname ${C2_HOSTNAME}"
+fi
+
+export C2_SWITCHES="${C2_SWITCHES} -reverseProxy -reverseProxyPort 4242"
+
+if [ -z ${C2_DEBUG+x} ]
+then
+    echo "Debug not set"
+else
+    export C2_SWITCHES="${C2_SWITCHES} -debug"
 fi
 
 if [ -z ${C2_LICENSE_KEY+x} ]
