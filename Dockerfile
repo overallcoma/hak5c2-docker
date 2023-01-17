@@ -3,7 +3,7 @@ FROM debian:latest
 RUN apt update -y
 RUN apt upgrade -y
 RUN apt install unzip -y
-RUN apt install wget
+RUN apt install wget -y
 RUN shopt -s extglob
 RUN rm /hack5c2/!(*amd64_linux)
 RUN mkdir /hak5c2
