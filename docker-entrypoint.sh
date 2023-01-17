@@ -32,4 +32,4 @@ else
     export C2_SWITCHES="${C2_SWITCHES} -setLicenseKey ${C2_LICENSE_KEY}"
 fi
 
-"${C2_FILE} ${C2_SWITCHES}"
+"${C2_FILE}" "${C2_SWITCHES}"
