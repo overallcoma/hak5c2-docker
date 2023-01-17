@@ -5,14 +5,14 @@ echo "${C2_FILE}"
 ls /hak5c2
 ls /
 
-export C2_SWITCHES="${C2_SWITCHES} -reverseProxy"
+export C2_SWITCHES="-reverseProxy"
 
 if [ -z ${C2_DEBUG} ]
 then
     export C2_SWITCHES="${C2_SWITCHES} -debug"
 fi
 
-if [ -z ${$C2_HOSTNAME} ]
+if [ -z ${C2_HOSTNAME} ]
 then
     export C2_SWITCHES="${C2_SWITCHES} -hostname ${C2_HOSTNAME}"
 else
