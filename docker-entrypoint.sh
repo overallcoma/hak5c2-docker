@@ -20,7 +20,7 @@ fi
 
 if test -z "$C2_LICENSE_KEY"
 then
-    export C2_SWITCHES="${C2_SWITCHES} -setLicenseKey ${C2_LICENSE_KEY}
+    export C2_SWITCHES="${C2_SWITCHES} -setLicenseKey ${C2_LICENSE_KEY}"
 fi
 
 /hak5c2/${C2_FILE} ${C2_SWITCHES}
