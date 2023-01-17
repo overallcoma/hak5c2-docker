@@ -2,6 +2,8 @@
 
 export C2_FILE="$(find /hak5c2 -type f -name '*amd64_linux')"
 echo "${C2_FILE}"
+ls /hak5c2
+ls /
 
 export C2_SWITCHES="${C2_SWITCHES} -reverseProxy"
 
