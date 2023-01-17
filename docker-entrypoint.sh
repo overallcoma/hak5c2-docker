@@ -13,7 +13,7 @@ then
     sleep 10
     exit
 else
-    export C2_SWITCHES="${C2_SWITCHES} -hostname ${C2_HOSTNAME}"
+    export C2_SWITCHES="-hostname ${C2_HOSTNAME}"
 fi
 
 export C2_SWITCHES="${C2_SWITCHES} -reverseProxy -reverseProxyPort 4242"
