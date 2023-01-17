@@ -8,5 +8,6 @@ RUN mkdir /hak5c2
 RUN wget -q https://c2.hak5.org/download/latest -O /hak5c2/cloudc2.zip
 RUN unzip /hak5c2/cloudc2.zip
 RUN find /hak5c2 -type f -not -name '*amd64_linux' -delete
+RUN find /hak5c2 -type f -name '*amd64_linux' | xargs chmod +x
 COPY ./docker-entrypoint.sh /docker-entrypoint.sh
 ENTRYPOINT /bin/bash /docker-entrypoint.sh
