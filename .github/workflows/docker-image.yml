@@ -12,5 +12,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-    run: cd ./.github/workflows
-    run: docker build ./.github/workflows/ --file Dockerfile --tag hak5c2-docker:$(date +%s)
+    run: cd ./.github/workflows && docker build ./.github/workflows/ --file Dockerfile --tag hak5c2-docker:$(date +%s)
