@@ -13,23 +13,26 @@ then
     sleep 10
     exit
 else
-    export C2_SWITCHES+=( "-hostname" "${C2_HOSTNAME}" )
+    C2_SWITCHES+=( "-hostname" )
+    C2_SWITCHES+=(  "${C2_HOSTNAME}" )
 fi
 
-export C2_SWITCHES+=( "-reverseProxy" "-reverseProxyPort 4242" )
+C2_SWITCHES+=( "-reverseProxy" )
+C2_SWITCHES+=( "-reverseProxyPort 4242" )
 
 if [ -z ${C2_DEBUG+x} ]
 then
     echo "Debug not set"
 else
-    export C2_SWITCHES+=( "-debug" )
+    C2_SWITCHES+=( "-debug" )
 fi
 
 if [ -z ${C2_LICENSE_KEY+x} ]
 then
     echo "License Key Not Set"
 else
-    export C2_SWITCHES+=( "-setLicenseKey" "${C2_LICENSE_KEY}" )
+    C2_SWITCHES+=( "-setLicenseKey" )
+    C2_SWITCHES+=( "${C2_LICENSE_KEY}" )
 fi
 
 "${C2_FILE}" "${C2_SWITCHES}"
