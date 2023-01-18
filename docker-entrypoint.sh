@@ -35,4 +35,8 @@ else
     C2_SWITCHES+=( "${C2_LICENSE_KEY}" )
 fi
 
+for i in ${C2_SWITCHES}; do
+    echo i
+done
+
 "${C2_FILE}" "${C2_SWITCHES}"
