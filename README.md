@@ -13,11 +13,9 @@ services:
     hostname: hak5c2
     environment:
       - C2_HOSTNAME=my.domain.com
-    expose:
-      - "4242"
-      - "8080"
     ports:
       - 2022:2022
+      - 8080:8080
     volumes:
       - hak5c2:/data
     restart: unless-stopped
