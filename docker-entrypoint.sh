@@ -16,8 +16,8 @@ fi
 
 C2_SWITCHES+=('-db')
 C2_SWITCHES+=('/data/c2.db')
-C2_SWITCHES+=('-reverseProxy')
-C2_SWITCHES+=('-reverseProxyPort')
+# C2_SWITCHES+=('-reverseProxy')
+# C2_SWITCHES+=('-reverseProxyPort')
 C2_SWITCHES+=('4242')
 C2_SWITCHES+=('listenport')
 C2_SWITCHES+=('8080')
@@ -38,10 +38,6 @@ else
     C2_SWITCHES+=("-setLicenseKey")
     C2_SWITCHES+=($C2_LICENSE_KEY)
 fi
-
-for i in "${C2_SWITCHES[@]}"; do
-    echo $i
-done
 
 SWITCH_STRING="${C2_SWITCHES[@]}"
 RUN_COMMAND="$C2_FILE $SWITCH_STRING"
