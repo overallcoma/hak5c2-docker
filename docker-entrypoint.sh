@@ -36,7 +36,7 @@ else
 fi
 
 for i in ${C2_SWITCHES}; do
-    echo i
+    echo $i
 done
 
 "${C2_FILE}" "${C2_SWITCHES}"
