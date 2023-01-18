@@ -22,7 +22,7 @@ services:
 networks:
   default:
     external:
-      name: homenet
+      name: MyNetworkName
 volumes:
   hak5c2:
     name: hak5c2
