@@ -13,19 +13,19 @@ then
     sleep 10
     exit
 else
-    C2_SWITCHES+=( "-hostname" )
-    C2_SWITCHES+=( $C2_HOSTNAME )
+    C2_SWITCHES+=('-hostname')
+    C2_SWITCHES+=("$C2_HOSTNAME")
 fi
 
-C2_SWITCHES+=("-reverseProxy")
-C2_SWITCHES+=("-reverseProxyPort")
-C2_SWITCHES+=("4242")
+C2_SWITCHES+=('-reverseProxy')
+C2_SWITCHES+=('-reverseProxyPort')
+C2_SWITCHES+=('4242')
 
 if [ -z ${C2_DEBUG+x} ]
 then
     echo "Debug not set"
 else
-    C2_SWITCHES+=("-debug")
+    C2_SWITCHES+=('-debug')
 fi
 
 if [ -z ${C2_LICENSE_KEY+x} ]
@@ -36,7 +36,7 @@ else
     C2_SWITCHES+=($C2_LICENSE_KEY)
 fi
 
-for i in $C2_SWITCHES; do
+for i in "${C2_SWITCHES[@]}"; do
     echo $i
 done
 
