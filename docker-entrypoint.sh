@@ -40,4 +40,5 @@ for i in "${C2_SWITCHES[@]}"; do
     echo $i
 done
 
-$C2_FILE $C2_SWITCHES
+RUN_COMMAND=$C2_FILE $C2_SWITCHES
+$RUN_COMMAND
