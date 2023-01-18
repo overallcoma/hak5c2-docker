@@ -16,6 +16,8 @@ fi
 C2_SWITCHES+=('-reverseProxy')
 C2_SWITCHES+=('-reverseProxyPort')
 C2_SWITCHES+=('4242')
+C2_SWITCHES+=('listenport')
+C2_SWITCHES+=('8080')
 
 if [ -z ${C2_DEBUG+x} ]
 then
