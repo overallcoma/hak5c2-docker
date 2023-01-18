@@ -30,3 +30,7 @@ volumes:
   hak5c2:
     name: hak5c2
 ```
+
+### Retrieve Setup Token
+```
+docker exec hak5c2 cat /c2_setup_token.txt
