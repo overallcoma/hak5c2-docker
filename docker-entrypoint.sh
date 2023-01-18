@@ -1,10 +1,6 @@
 #!/bin/bash
 
-C2_FILE="/hak5c2/c2-3.2.0_amd64_linux"
-echo "${C2_FILE}"
-chmod +x "${C2_FILE}"
-echo "${C2_FILE}"
-echo "${C2_HOSTNAME}"
+C2_FILE=$(find ./hak5c2/ -type f -name '*amd64_linux')
 C2_SWITCHES=()
 
 if [ -z ${C2_HOSTNAME+x} ]
@@ -41,7 +37,5 @@ for i in "${C2_SWITCHES[@]}"; do
 done
 
 SWITCH_STRING="${C2_SWITCHES[@]}"
-echo $SWITCH_STRING
 RUN_COMMAND="$C2_FILE $SWITCH_STRING"
-echo $RUN_COMMAND
 $RUN_COMMAND
