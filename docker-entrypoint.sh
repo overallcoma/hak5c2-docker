@@ -18,8 +18,10 @@ C2_SWITCHES+=('-reverseProxyPort')
 C2_SWITCHES+=('4242')
 C2_SWITCHES+=('listenport')
 C2_SWITCHES+=('8080')
-C2_SWITCHES+=('db')
+
+C2_SWITCHES+=('-db')
 C2_SWITCHES+=('/data/c2.db')
+mkdir -p /data
 
 if [ -z ${C2_DEBUG+x} ]
 then
